@@ -73,6 +73,12 @@ mono_crash.*
 *.unitypackage.meta
 *.app
 
+# Unity build output folders - exclude any folder ending with Build
+*Build/
+*Build_BackUpThisFolder_ButDontShipItWithYourGame/
+VRWorkshopBuild.apk
+VRWorkshopBuild/
+
 # Crashlytics generated file
 crashlytics-build.properties
 
