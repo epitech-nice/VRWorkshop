@@ -23,33 +23,33 @@ Ce document explique chaque action comme si c’était la première fois que tu 
 
 ### 2. Extraire le projet sur ton ordinateur
 
-- Sur **Windows** :  
-  - Fais un clic droit sur le fichier téléchargé.  
+- Sur **Windows** :
+  - Fais un clic droit sur le fichier téléchargé.
   - Choisis “Extraire tout…”, puis “Extraire”. [1]
 
-- Sur **macOS** :  
+- Sur **macOS** :
   - Double-clique sur le fichier téléchargé, un dossier sera créé automatiquement. [1]
 
 À l’intérieur du dossier extrait, cherche un dossier nommé **“VR Room Project”**. [1]
 
 ### 3. Renommer et déplacer le dossier du projet
 
-1. Renomme le dossier `VR Room Project` en par exemple :  
+1. Renomme le dossier `VR Room Project` en par exemple :
    - `VR Room - [Ton Prénom]` (exemple : `VR Room - Alex`). [1]
-2. Déplace ce dossier à un endroit simple à retrouver, par exemple :  
+2. Déplace ce dossier à un endroit simple à retrouver, par exemple :
    - Bureau → nouveau dossier `Create with VR` → y glisser `VR Room - [Ton Prénom]`. [1]
 
 ### 4. Ajouter le projet dans Unity Hub
 
 1. Ouvre **Unity Hub**. [2]
-2. Va dans l’onglet **Projects**.  
+2. Va dans l’onglet **Projects**.
 3. Clique sur **Add** ou **Add project from disk**. [1]
 4. Navigue jusqu’au dossier `VR Room - [Ton Prénom]`, sélectionne-le, puis valide. [1]
-5. Le projet apparaît maintenant dans la liste des projets Unity Hub.  
+5. Le projet apparaît maintenant dans la liste des projets Unity Hub.
 
 ### 5. Ouvrir le projet avec Unity 6.x
 
-1. Dans Unity Hub, clique sur ton projet `VR Room - [Ton Prénom]`.  
+1. Dans Unity Hub, clique sur ton projet `VR Room - [Ton Prénom]`.
 2. Si Unity demande de **choisir une version**, sélectionne **Unity 6.x**. [1][2]
 3. Si une fenêtre te propose de “Mettre à jour le projet vers une version plus récente de Unity 6”, clique sur **Confirm**. [1]
 4. Attends l’ouverture du projet : la première fois, cela peut prendre plusieurs minutes. [1]
@@ -63,7 +63,7 @@ Ce document explique chaque action comme si c’était la première fois que tu 
 1. Dans Unity, repère la fenêtre **Project** (en bas par défaut). [2]
 2. Dans **Project**, double-clique sur le dossier **Scenes** pour l’ouvrir. [1]
 3. Cherche la scène appelée **Create-with-VR-Starter-Scene**. [1]
-4. Clic droit dessus → **Rename** → renomme-la par exemple :  
+4. Clic droit dessus → **Rename** → renomme-la par exemple :
    - `[Ton_Nom] Room` (ex : `Alex Room`). [1]
 5. Double-clique sur ta scène renommée pour l’ouvrir. [1]
 
@@ -72,7 +72,7 @@ Tu viens d’ouvrir la scène sur laquelle tu vas travailler.
 ### 2. Comprendre les fenêtres principales
 
 - **Hierarchy** (gauche) : liste tous les objets de la scène (caméra, lumière, objets 3D…). [2]
-- **Scene** (centre) : vue 3D où tu vois ta scène.  
+- **Scene** (centre) : vue 3D où tu vois ta scène.
 - **Game** (onglet à côté de Scene) : ce que le joueur voit quand le jeu tourne. [2]
 - **Inspector** (droite) : montre les propriétés de l’objet sélectionné (position, composants…). [2]
 
@@ -81,10 +81,10 @@ Tu viens d’ouvrir la scène sur laquelle tu vas travailler.
 1. Dans la fenêtre **Hierarchy**, cherche un objet nommé **XR Origin (VR)**. [1]
 2. Clique dessus. Dans l’**Inspector**, tu vois un composant **XR Origin** qui gère la position du joueur en VR. [1]
 3. Dans la **Hierarchy**, clique sur la petite flèche à gauche de **XR Origin (VR)** pour voir ses enfants. [1]
-4. Tu devrais voir, entre autres :  
-   - **Camera Offset**  
-   - **Main Camera**  
-   - **LeftHand Controller**  
+4. Tu devrais voir, entre autres :
+   - **Camera Offset**
+   - **Main Camera**
+   - **LeftHand Controller**
    - **RightHand Controller** [1]
 
 ### 4. Comprendre le composant “Tracked Pose Driver”
@@ -132,9 +132,9 @@ Ce composant charge un fichier d’actions qui décrit comment les mouvements/ b
 1. Dans l’**Inspector** de **Input Action Manager**, repère la référence à un asset nommé **XRI Default Input Actions**. [1]
 2. Clique sur la petite icône ou sur le nom de l’asset pour le sélectionner dans le **Project**. [1]
 3. Une fois sélectionné, double-clique sur **XRI Default Input Actions** dans la fenêtre **Project**. [1]
-4. L’éditeur des Input Actions s’ouvre dans une nouvelle fenêtre.  
+4. L’éditeur des Input Actions s’ouvre dans une nouvelle fenêtre.
 
-Dans cet éditeur :  
+Dans cet éditeur :
 - À gauche : les **Action Maps** (groupes d’actions comme “Head”, “LeftHand”, “RightHand”…). [1]
 - À droite : les **Actions** individuelles (position, rotation, bouton de saisie…). [1]
 
@@ -145,11 +145,11 @@ Dans cet éditeur :
 ### 1. Trouver les prefabs de pièce (rooms)
 
 1. Dans la fenêtre **Project**, cherche le dossier **_Course Library**. [1]
-2. Ouvre successivement :  
+2. Ouvre successivement :
    - `_Course Library` → `_Prefabs` → `Rooms`. [1]
-3. Tu devrais voir plusieurs prefabs de pièces, par exemple :  
-   - **Room_Modern**  
-   - **Room_Rustic**  
+3. Tu devrais voir plusieurs prefabs de pièces, par exemple :
+   - **Room_Modern**
+   - **Room_Rustic**
    - **Room_Traditional** [1]
 
 Un **prefab** est un modèle prêt à l’emploi d’un objet (ou ensemble d’objets) que tu peux glisser dans la scène. [2]
@@ -157,11 +157,11 @@ Un **prefab** est un modèle prêt à l’emploi d’un objet (ou ensemble d’o
 ### 2. Ajouter une pièce dans la scène
 
 1. Choisis un prefab de room, par exemple **Room_Modern**. [1]
-2. Clique et maintiens le clic sur **Room_Modern** dans le **Project**.  
+2. Clique et maintiens le clic sur **Room_Modern** dans le **Project**.
 3. Glisse-le dans la fenêtre **Hierarchy** et relâche. [1]
-4. Sélectionne l’objet **Room_Modern** dans la **Hierarchy**.  
+4. Sélectionne l’objet **Room_Modern** dans la **Hierarchy**.
 5. Dans l’**Inspector**, trouve le composant **Transform**. [2]
-6. Mets les valeurs de position à :  
+6. Mets les valeurs de position à :
    - **X = 0**, **Y = 0**, **Z = 0**. [1]
 
 ### 3. Supprimer le plan (Plane) de base
@@ -179,16 +179,16 @@ Il ne sert plus car la pièce que tu viens d’ajouter a déjà un sol.
 
 1. Dans **Project**, ouvre : `_Course Library` → `_Prefabs` → `Environments`. [1]
 2. Cherche un prefab contenant “Foreground” dans son nom (par ex. **Foreground_XXXX**). [1]
-3. Glisse ce prefab dans la **Hierarchy**.  
+3. Glisse ce prefab dans la **Hierarchy**.
 
 ### 2. Ajouter un arrière-plan (Background)
 
 1. Dans le même dossier `Environments`, choisis un prefab “Background”. [1]
-2. Glisse ce prefab dans la **Hierarchy** également.  
+2. Glisse ce prefab dans la **Hierarchy** également.
 
 ### 3. Positionner l’environnement derrière les fenêtres
 
-1. Sélectionne ton prefab **Foreground** dans la **Hierarchy**.  
+1. Sélectionne ton prefab **Foreground** dans la **Hierarchy**.
 2. Dans la vue **Scene**, utilise les outils de déplacement (raccourci W) pour le placer de façon à ce qu’il soit visible à travers les fenêtres de ta pièce. [2]
 3. Fais la même chose pour le **Background**, en le plaçant plus loin pour faire un paysage lointain. [1]
 
@@ -199,8 +199,8 @@ Il ne sert plus car la pièce que tu viens d’ajouter a déjà un sol.
 1. Dans la **Hierarchy**, trouve l’objet **Directional Light**. [1]
 2. Clique dessus. Dans l’**Inspector**, repère le **Transform**. [2]
 3. Modifie les valeurs de **Rotation X** et **Rotation Y** pour changer l’angle de la lumière. [1]
-   - Par exemple, change X pour simuler un soleil plus haut ou plus bas.  
-   - Change Y pour faire venir la lumière d’un autre côté.  
+   - Par exemple, change X pour simuler un soleil plus haut ou plus bas.
+   - Change Y pour faire venir la lumière d’un autre côté.
 
 Tu peux aussi changer la **Color** dans le composant **Light** pour simuler une lumière de fin de journée (plus orangée). [1]
 
@@ -210,7 +210,7 @@ Tu peux aussi changer la **Color** dans le composant **Light** pour simuler une 
 
 ### 1. Ajouter le prefab “XR Device Simulator”
 
-1. Dans **Project**, ouvre :  
+1. Dans **Project**, ouvre :
    - `Samples` → `XR Interaction Toolkit` → `[version]` → `XR Device Simulator` → `XRDeviceSimulator`. [1]
 2. Glisse le prefab **XR Device Simulator** dans la **Hierarchy**. [1]
 
@@ -249,8 +249,8 @@ Ne pas le désactiver peut casser le suivi de tête réel quand tu testes avec u
 ### 2. Corriger les avertissements OpenXR (interaction profile)
 
 1. Si tu vois un petit icône de warning à côté de OpenXR, clique dessus pour ouvrir la fenêtre **Project Validation**. [1]
-2. Suis les instructions, généralement :  
-   - Cliquer sur **Edit** pour ouvrir les **OpenXR settings**.  
+2. Suis les instructions, généralement :
+   - Cliquer sur **Edit** pour ouvrir les **OpenXR settings**.
    - Ajouter un profil d’interaction adapté à ton casque, par exemple **Oculus Touch Controller Profile** pour un Quest. [1][3]
    - Activer les Feature Groups recommandés (OpenXR Feature Groups). [1]
 
@@ -258,12 +258,12 @@ Ne pas le désactiver peut casser le suivi de tête réel quand tu testes avec u
 
 1. Branche ton casque VR à ton PC avec un câble compatible. [3]
 2. Lance l’application prévue (par exemple **Quest Link / Meta Quest App** pour le Quest). [3]
-3. Vérifie que l’appli détecte correctement ton casque.  
+3. Vérifie que l’appli détecte correctement ton casque.
 
 ### 4. Tester dans l’éditeur
 
 1. Assure-toi que **XR Device Simulator** est **désactivé** dans la **Hierarchy**. [1]
-2. Clique sur **Play**.  
+2. Clique sur **Play**.
 3. Mets ton casque : tu devrais voir ta pièce VR et pouvoir bouger la tête pour regarder autour. [1]
 
 ***
@@ -283,8 +283,8 @@ Ne pas le désactiver peut casser le suivi de tête réel quand tu testes avec u
 
 1. Clique sur l’icône de warning pour ouvrir **OpenXR Project Validation**. [1]
 2. Si possible, clique sur **Fix All**. [1]
-3. S’il reste un message sur un “interaction profile” manquant :  
-   - Clique sur **Edit** pour ouvrir les **OpenXR settings**.  
+3. S’il reste un message sur un “interaction profile” manquant :
+   - Clique sur **Edit** pour ouvrir les **OpenXR settings**.
    - Dans l’onglet **Android**, clique sur le bouton **+** pour ajouter un profil. [1]
    - Pour Quest, choisis **Oculus Touch Controller Profile** et active **Meta Quest Support**. [1][3]
 
@@ -304,9 +304,9 @@ Ne pas le désactiver peut casser le suivi de tête réel quand tu testes avec u
 1. Allume ton Quest et branche-le à ton ordinateur. [3]
 2. Dans la fenêtre de build, à côté de **Run Device**, clique sur **Refresh**. [1]
 3. Sélectionne ton casque dans la liste (il peut apparaître comme un ID ou un nom). [1]
-4. Si rien n’apparaît :  
+4. Si rien n’apparaît :
    - Mets le casque et accepte la demande “Allow USB debugging”. [3]
-   - Vérifie que le mode développeur est activé.  
+   - Vérifie que le mode développeur est activé.
    - Redémarre éventuellement le casque ou Unity. [3]
 
 ### 6. Build & Run sur le casque
@@ -322,10 +322,10 @@ Une fois terminé, l’application est installée sur ton Quest dans la section 
 
 ## Étape 11 – Problèmes fréquents
 
-- L’image ne prend pas tout le champ de vision :  
+- L’image ne prend pas tout le champ de vision :
   - Souvent lié à une mauvaise configuration des plug-ins XR (OpenXR). [1]
-- Toute la scène bouge avec ta tête :  
-  - Le **XR Device Simulator** est peut-être encore actif.  
+- Toute la scène bouge avec ta tête :
+  - Le **XR Device Simulator** est peut-être encore actif.
   - Ou l’**Input Action Manager** n’est pas correctement configuré. [1]
 
 ***
