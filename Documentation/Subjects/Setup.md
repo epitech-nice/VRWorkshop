@@ -1,8 +1,9 @@
-# README – Tutoriel Unity 1.1 : VR Project Setup (Unity 6.x)
-
-Ce document explique chaque action comme si c’était la première fois que tu ouvres Unity. Tu peux ensuite ajouter des captures d’écran pour illustrer chaque étape.
-
-***
+---
+title:      VR Project Setup (Unity 6.x)
+subtitle:   Guide pas à pas pour configurer un projet VR dans Unity
+author:     Alexandre De Freitas Martins (@AlexandreDFM | alexandre.defreitas@epitech.eu)
+version:    1.0
+---
 
 ## Pré-requis
 
