@@ -1,4 +1,9 @@
-# Challenge : L'Atelier de Peinture 3D
+---
+title:      L'Atelier de Peinture 3D
+subtitle:   Corrigez et améliorez une scène VR existante
+author:     Alexandre De Freitas Martins (@AlexandreDFM | alexandre.defreitas@epitech.eu)
+version:    1.0
+---
 
 Dans ce défi, vous allez réparer une application de peinture en réalité virtuelle. Certains outils sont cassés, les contrôles sont inversés et des fonctionnalités manquent. Suivez ce guide pas à pas.
 
@@ -25,11 +30,14 @@ Utilisez le document "L'interface de Unity" pour localiser les fenêtres (Lettre
 - Dans l'Inspecteur (F), regardez le composant XR Controller (Action-based). Vérifiez les actions assignées (Position/Rotation). Elles pointent probablement vers les actions de la main droite (Right Hand). Changez-les pour utiliser les actions de la main gauche (Left Hand).
 - Faites l'inverse pour le Right Hand Controller (Rayon).
 
-> **Comment tester ?**
-> - En mode Play :
->   - Maj Gauche (Left Shift) active la main gauche (Palette).
->   - Barre Espace active la main droite (Rayon).
->   - Si la palette bouge quand vous appuyez sur Espace, c'est que c'est encore inversé !
+::: tip
+**Comment tester ?**
+
+- En mode Play :
+- Maj Gauche (Left Shift) active la main gauche (Palette).
+- Barre Espace active la main droite (Rayon).
+- Si la palette bouge quand vous appuyez sur Espace, c'est que c'est encore inversé !
+:::
 
 ## Partie 3 : Logique du Pinceau
 
