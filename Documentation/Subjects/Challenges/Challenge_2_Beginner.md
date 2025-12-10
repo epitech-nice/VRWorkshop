@@ -110,4 +110,7 @@ Bonne chance !
 
 Unity Create with VR Challenge 1.4: Rearrangeable Art Bien que cette vidéo concerne un challenge précédent (Art Réarrangeable), elle montre les mêmes principes de World Space Canvas et de manipulation d'objets VR essentiels pour réussir la partie interface de votre défi.
 
-https://www.youtube.com/watch?v=nN8cF5nJTRg
+Si jamais vous vouliez voir la solution en vidéo, elle est disponible ici :
+
+
+[Challenge 2](https://www.youtube.com/watch?v=nN8cF5nJTRg)
