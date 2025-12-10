@@ -1,12 +1,13 @@
-# L'interface de Unity
+---
+title:      Unity's interface
+subtitle:   A guide to Unity's editor windows
+author:     Alexandre De Freitas Martins (@AlexandreDFM | alexandre.defreitas@epitech.eu)
+version:    1.0
+---
 
 Cette section propose une visite détaillée des fenêtres de l'éditeur les plus courantes et explique comment les utiliser pleinement.
 
-<br>
-
-![Unity Editor Layout](../img/unity-editor-window.png)
-
-<br>
+![unity-editor-layout](unity-editor-window.png "unity editor window"){width="75%"}
 
 _Les fenêtres les plus courantes sont ici décrites dans leurs positions par défaut._
 

@@ -89,3 +89,7 @@ Pour chaque étape, suivez le guide ci-dessous. Référez-vous aux lettres entre
 - Réglez leur Spatial Blend sur 1 (3D) pour que le son vienne d'une direction précise.
 
 C'est terminé ! N'oubliez pas de sauvegarder votre scène (File > Save).
+
+Si jamais vous vouliez voir la solution en vidéo, elle est disponible ici :
+
+[Challenge 1](https://www.youtube.com/watch?v=5Q3zmaKSORw)

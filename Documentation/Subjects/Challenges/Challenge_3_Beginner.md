@@ -101,3 +101,7 @@ Ces tâches nécessitent de la programmation ou de l'ajout d'UI.
 - Utilisez Time.time ou Time.deltaTime pour afficher le temps écoulé depuis le début de l'exercice.
 
 Bon courage pour l'optimisation de votre usine !
+
+Si jamais vous vouliez voir la solution en vidéo, elle est disponible ici :
+
+[Challenge 3](https://www.youtube.com/watch?v=nN8cF5nJTRg)

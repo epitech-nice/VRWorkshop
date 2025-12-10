@@ -337,17 +337,3 @@ Une fois terminé, l’application est installée sur ton Quest dans la section 
 - Ajouter une horloge murale qui affiche l’heure réelle (avec `DateTime.Now` en C#). [1]
 
 ***
-
-Si tu veux, le prochain message peut détailler certains sous-blocs sous forme de “fiches” avec captures suggérées (par exemple “Comment reconnaître la fenêtre Hierarchy”, “Comment utiliser les outils de déplacement dans la Scene”, etc.).
-
-Sources
-[1] 1.1 - VR Project Setup - Unity Learn https://learn.unity.com/tutorial/vr-project-setup
-[2] Unity - Manual: Unity 6.2 User Manual https://docs.unity3d.com/6000.2/Documentation/Manual/UnityManual.html
-[3] Set up Unity for VR development | Meta Horizon OS Developers https://developers.meta.com/horizon/documentation/unity/unity-project-setup/
-[4] 1.1 - VR Project Setup - Unity Learn https://learn.unity.com/pathway/vr-development/unit/vr-basics/tutorial/1-1-vr-project-setup?version=6.2
-[5] VR Development Pathway - Unity Learn https://learn.unity.com/pathway/vr-development
-[6] How to Make a VR Game in Unity 6.2 - Part 1 : Setup and Player https://www.youtube.com/watch?v=exc-73Mna3A
-[7] How to Make a VR Game in Unity 6.2 - Part 3 - YouTube https://www.youtube.com/watch?v=Au8w_6qZxT8
-[8] Unity 6 - Complete Beginners Tutorial (2025) - YouTube https://www.youtube.com/watch?v=vQY4jsho1nQ
-[9] How to Make a VR Game in Unity 6.2 - Part 6 : Ray and Poke Interactor https://www.youtube.com/watch?v=rMaYhvgyi0U
-[10] Create with VR course - Unity Learn https://learn.unity.com/course/create-with-vr
