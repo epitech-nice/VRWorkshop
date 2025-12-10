@@ -1,12 +1,15 @@
-# Mini-Atelier : Créez votre premier Chamboule-Tout VR !
+---
+title:      Chamboule-Tout VR !
+subtitle:   Votre première création en réalité virtuelle
+author:     Alexandre De Freitas Martins (@AlexandreDFM | alexandre.defreitas@epitech.eu)
+version:    1.0
+---
 
 Bienvenue dans votre premier atelier créatif ! Aujourd'hui, nous n'allons pas réparer une scène, nous allons la créer. Votre but : Construire une petite aire de jeu où vous pouvez vous déplacer, attraper un cube "balle" et le lancer sur une pyramide de cylindres.
 
-Utilisez L'interface de Unity (fr.pdf) pour vous repérer et Rig Simulator (Shortcuts) pour tester.
+Utilisez L'interface de Unity (**Unity_Manual_Unity's_interface_FR.pdf**) pour vous repérer et Rig Simulator (**Rig_Simulator_Keyboard_Shortcuts.pdf** & **Setup.pdf**) pour tester.
 
 ## Étape 1 : Préparer le Joueur (Setup & Locomotion)
-
-**Basé sur les tutoriels 1.1 et 1.2**
 
 Pour commencer, il nous faut un sol et un joueur capable de se téléporter.
 
@@ -15,20 +18,24 @@ Pour commencer, il nous faut un sol et un joueur capable de se téléporter.
 
 - **Le Joueur VR :**
   - Supprimez la "Main Camera" par défaut.
-  - Faites Clic-droit > XR > XR Origin (VR). C'est votre avatar.
+  - Dans la Fenêtre Inspecteur (F), cherchez la prefab XR Origin Hands (XR Rig) via la barre de recherche en haut.
+  - Glissez-déposez cette prefab dans la Hiérarchie (B).
 
 - **La Téléportation :**
   - Sélectionnez votre objet Plane (le sol).
   - Dans la Fenêtre Inspecteur (F), cliquez sur Add Component.
   - Cherchez et ajoutez Teleportation Area. Cela rend le sol "cliquable" pour se déplacer.
 
-> **Testons tout de suite !**
-> - Lancez le jeu (Play).
-> - Pour bouger la tête : Maintenez le Clic-droit de la souris et bougez-la.
-> - **Pour se déplacer (Téléportation) :**
->   - Activez la main droite en maintenant la Barre Espace.
->   - Pointez le sol avec la souris. La ligne doit devenir blanche ou verte.
->   - Appuyez sur G (ou clic-gauche selon votre config) pour valider la téléportation. Si vous changez de place, c'est gagné !
+::: tip
+**Testons tout de suite !**
+
+- Lancez le jeu (Play).
+- Pour bouger la tête : Maintenez le Clic-droit de la souris et bougez-la.
+- **Pour se déplacer (Téléportation) :**
+- Activez la main droite en maintenant la Barre Espace.
+- Pointez le sol avec la souris. La ligne doit devenir blanche ou verte.
+- Appuyez sur G (ou clic-gauche selon votre configuration) pour valider la téléportation. Si vous changez de place, c'est gagné !
+:::
 
 ## Étape 2 : Créer la "Balle" (Grabbable)
 
@@ -46,11 +53,14 @@ Maintenant, créons un objet que l'on peut ramasser et jeter.
 - **L'Interaction :**
   - Ajoutez un composant XR Grab Interactable. C'est le composant magique qui permet à vos mains VR d'attraper l'objet.
 
-> **Testons la physique !**
-> - En mode Play, approchez-vous du cube (avec Z/Q/S/D et la souris).
-> - Activez une main (ex: Maj Gauche pour la main gauche).
-> - Pointez le cube. Quand le rayon devient blanc, appuyez sur G (Grip) pour l'attraper.
-> - Bougez la souris pour lever le cube, et relâchez G en bougeant brusquement la souris pour le lancer !
+::: tip
+**Testons la physique !**
+
+- En mode Play, approchez-vous du cube (avec Z/Q/S/D et la souris).
+- Activez une main (ex: Maj Gauche pour la main gauche).
+- Pointez le cube. Quand le rayon devient blanc, appuyez sur G (Grip) pour l'attraper.
+- Bougez la souris pour lever le cube, et relâchez G en bougeant brusquement la souris pour le lancer !
+:::
 
 ## Étape 3 : Le Socle de Rangement (Sockets)
 
@@ -70,10 +80,13 @@ Créons un endroit spécifique où le cube doit être rangé. S'il est proche, i
   - Pour voir où poser l'objet, le Socket Interactor a besoin d'un "Mesh".
   - Dans l'Inspecteur (F) du Socket, cherchez la ligne Show Interactable Hover Meshes et cochez-la.
 
-> **Le Test Final :**
-> - Attrapez votre cube "Balle".
-> - Approchez-le de votre "Socket". Vous devriez voir un fantôme du cube apparaître à l'emplacement.
-> - Lâchez le cube (Relâchez G) : il doit se fixer parfaitement au centre du socle.
+::: tip
+**Le Test Final :**
+
+- Attrapez votre cube "Balle".
+- Approchez-le de votre "Socket". Vous devriez voir un fantôme du cube apparaître à l'emplacement.
+- Lâchez le cube (Relâchez G) : il doit se fixer parfaitement au centre du socle.
+:::
 
 ## Étape 4 : Le Défi (Pour s'amuser)
 
