@@ -9,6 +9,8 @@ Dans ce défi, vous devez finaliser une simulation industrielle. L'éclairage es
 
 Pour chaque étape, utilisez le document "L'interface de Unity" pour localiser les fenêtres (Lettres A à H) et le document "Rig Simulator" pour tester les contrôles.
 
+\newpage
+
 ## Partie 1 : Le "Fade" (Écran Noir)
 
 **Le problème :** L'écran noir qui sert de transition (Fade) apparaît au milieu de l'usine, comme un mur flottant, au lieu de couvrir votre vision.
@@ -26,6 +28,8 @@ Pour chaque étape, utilisez le document "L'interface de Unity" pour localiser l
 - Bougez la tête (Simulateur : Maintenez Clic-droit et bougez la souris) pour voir si le carré noir reste bien collé à votre vision.
 :::
 
+\newpage
+
 ## Partie 2 : Le bouton de la Console
 
 **Le problème :** Le bouton "Console Labels" fait disparaître toute la machine au lieu de cacher seulement les étiquettes textuelles.
@@ -39,6 +43,8 @@ Tips : Utilisez la barre de recherche en haut de la Hiérarchie (B) et tapez "To
 - Repérez la section On Value Changed. Vous verrez qu'il cible l'objet Console entier.
 - Remplacez cet objet par l'objet enfant qui ne contient que les textes (souvent appelé Labels ou TextOverlay). Glissez cet objet depuis la Hiérarchie vers la case de l'événement.
 
+\newpage
+
 ## Partie 3 : L'éclairage du Sol (Qualité)
 
 **Le problème :** Le sol semble flou et pixelisé par rapport aux autres objets. La résolution de sa "lumière cuite" (Baked Lightmap) est trop basse.
@@ -49,6 +55,8 @@ Tips : Utilisez la barre de recherche en haut de la Hiérarchie (B) et tapez "To
 - Sélectionnez l'objet du sol (Floor).
 - Dans l'Inspecteur (F), trouvez le composant Mesh Renderer.
 - Cherchez la propriété Scale in Lightmap et augmentez ce chiffre (essayez de doubler ou tripler la valeur) (10 la valeur si PC le tolère) pour avoir des ombres plus nettes.
+
+\newpage
 
 ## Partie 4 : Ombres manquantes sur les cartons
 
@@ -61,8 +69,11 @@ Tips : Utilisez la barre de recherche en haut de la Hiérarchie (B) et tapez "To
 - Cochez la petite case Static. Cela indique à Unity de calculer les ombres et la lumière pour cet objet immobile.
 (Potentiellement, vous pourriez avoir une fenêtre pop-up vous demandant de confirmer que vous voulez rendre l'objet statique. Acceptez.)
 
-[Insérer ici un screenshot du coin supérieur droit de l'Inspecteur montrant la case "Static"]
+<br />
+
 ![Screenshot montrant la case "Static" dans l'Inspecteur](./img/static_checkbox_challenge3.png)
+
+\newpage
 
 ## Partie 5 : La Console Sombre (Light Probes)
 
@@ -75,17 +86,19 @@ Tips : Utilisez la barre de recherche en haut de la Hiérarchie (B) et tapez "To
 - Dans la Vue Scène (D), cliquez sur Edit Light Probes dans l'Inspecteur.
 - Déplacez les boules jaunes (les sondes) pour qu'elles entourent la console. La console va alors "absorber" la lumière captée par ces sondes.
 
+\newpage
+
 ## Partie 6 : Indicateur visuel de l'Aimant
 
 **Le problème :** On ne sait pas quand l'aimant est actif. Il devrait changer de couleur.
-
-// Refaire
 
 **La solution :**
 
 - Trouvez le script qui gère l'aimant (sur l'objet Magnet ou le levier).
 - Repérez la fonction qui s'active quand l'aimant est allumé (souvent liée à un événement Activate).
 - Ajoutez une logique pour changer la couleur du matériau (Material.color). Inspirez-vous du code utilisé pour la lumière de la télécommande (Remote) si disponible dans le projet.
+
+\newpage
 
 ## Partie 7 : Bloquer le joueur pendant le Tuto
 
@@ -106,6 +119,8 @@ Tips : Utilisez la barre de recherche en haut de la Hiérarchie (B) et tapez "To
 - En mode Play, utilisez la Barre Espace (Main Droite ) pour cliquer sur "Next" dans les dialogues. Vérifiez que vos rayons disparaissent à la fin.
 :::
 
+\newpage
+
 ## Partie 8 & 9 : Défis Experts (Vitesse et Score)
 
 Ces tâches nécessitent de la programmation ou de l'ajout d'UI.
@@ -123,4 +138,6 @@ Bon courage pour l'optimisation de votre usine !
 
 Si jamais vous vouliez voir la solution en vidéo, elle est disponible ici :
 
+::: center
 [Challenge 3](https://www.youtube.com/watch?v=nN8cF5nJTRg)
+:::

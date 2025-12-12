@@ -9,6 +9,8 @@ Dans ce défi, vous allez réparer une application de peinture en réalité virt
 
 Utilisez le document "L'interface de Unity" pour localiser les fenêtres (Lettres A à H). Utilisez le document "Rig Simulator" pour tester sans casque VR.
 
+\newpage
+
 ## Partie 1 : Fixer l'Interface (Canvas)
 
 **Le problème :** Le menu qui permet de changer de forme (Sphère, Cube...) vous suit partout et reste collé à votre visage (comme un HUD). Il devrait être posé dans le monde 3D, à côté du socle.
@@ -19,6 +21,8 @@ Utilisez le document "L'interface de Unity" pour localiser les fenêtres (Lettre
 - Dans la Fenêtre Inspecteur (F), cherchez le composant Canvas.
 - Changez le Render Mode de Screen Space - Overlay à World Space.
 - Ajustez sa Pos (Position) et son Scale (Échelle) pour le placer proprement à côté du socle dans la Vue Scène (D). (Il sera probablement immense au début, réduisez l'échelle !).
+
+\newpage
 
 ## Partie 2 : Inversion des Mains
 
@@ -39,6 +43,8 @@ Utilisez le document "L'interface de Unity" pour localiser les fenêtres (Lettre
 - Si la palette bouge quand vous appuyez sur Espace, c'est que c'est encore inversé !
 :::
 
+\newpage
+
 ## Partie 3 : Logique du Pinceau
 
 **Le problème :** Le pinceau peint quand vous relâchez la gâchette et s'arrête quand vous appuyez. C'est l'inverse de ce qu'on veut.
@@ -50,6 +56,8 @@ Utilisez le document "L'interface de Unity" pour localiser les fenêtres (Lettre
 - Déroulez la section Interactable Events.
 - Regardez les événements Activated (Activé) et Deactivated (Désactivé). Vous verrez que la fonction StartPainting est sur "Deactivated" et StopPainting est sur "Activated". Inversez-les !
 
+\newpage
+
 ## Partie 4 : Le Bouton "Moyen" Invisible
 
 **Le problème :** Le bouton pour la taille de pinceau "Moyenne" devient invisible quand on clique dessus, et la taille du trait devient énorme.
@@ -59,6 +67,8 @@ Utilisez le document "L'interface de Unity" pour localiser les fenêtres (Lettre
 - Sélectionnez le bouton MediumBrushButton dans la Hiérarchie.
 - Dans l'Inspecteur, composant Button, regardez la section Colors. Cliquez sur la couleur Pressed Color. Vérifiez la barre "A" (Alpha/Transparence) en bas du sélecteur de couleur. Elle est peut-être à 0. Mettez-la à 255.
 - Dans le script BrushController (ou similaire) attaché au bouton, vérifiez la valeur de taille assignée. Elle doit être entre la valeur du "Petit" et du "Grand" bouton.
+
+\newpage
 
 ## Partie 5 : Audio 3D
 
@@ -70,6 +80,8 @@ Utilisez le document "L'interface de Unity" pour localiser les fenêtres (Lettre
 - Réglez le curseur Spatial Blend complètement vers la droite (sur 3D).
 - Déroulez 3D Sound Settings et ajustez la courbe de Rolloff (atténuation) pour que le volume baisse quand la distance augmente.
 
+\newpage
+
 ## Partie 6 : Audio de l'Interface
 
 **Le problème :** Les boutons du menu ne font aucun bruit quand on clique dessus.
@@ -79,6 +91,8 @@ Utilisez le document "L'interface de Unity" pour localiser les fenêtres (Lettre
 - Sur chaque bouton du menu (UI), cherchez l'événement On Click () dans l'Inspecteur.
 - Ajoutez une nouvelle action (+). Glissez l'objet qui gère les sons (parfois un AudioManager ou le bouton lui-même s'il a un script de son) dans la case.
 - Sélectionnez la fonction PlayQuickSound (ou un script équivalent fourni dans le projet comme ButtonSound.Click).
+
+\newpage
 
 ## Partie 7 : Cacher le Socle
 
@@ -90,6 +104,8 @@ Utilisez le document "L'interface de Unity" pour localiser les fenêtres (Lettre
 - Placez ce Toggle proprement.
 - Dans l'événement On Value Changed du Toggle, assignez l'objet Pedestal.
 - Choisissez la fonction GameObject.SetActive (Dynamic Bool) OU utilisez le script ToggleVisibility.Toggle si fourni (regardez les Hints).
+
+\newpage
 
 ## Partie 8 & 9 : Défis Experts (Sauvegarde et Rotation)
 
@@ -114,11 +130,8 @@ Ces tâches demandent un peu plus de logique.
   - Dans cette fonction, faites `transform.localEulerAngles = new Vector3(0, value, 0);`.
   - Connectez l'événement On Value Changed du Slider à cette fonction. Réglez le Slider de 0 à 360.
 
-Bonne chance !
-
-Unity Create with VR Challenge 1.4: Rearrangeable Art Bien que cette vidéo concerne un challenge précédent (Art Réarrangeable), elle montre les mêmes principes de World Space Canvas et de manipulation d'objets VR essentiels pour réussir la partie interface de votre défi.
-
 Si jamais vous vouliez voir la solution en vidéo, elle est disponible ici :
 
-
+::: center
 [Challenge 2](https://www.youtube.com/watch?v=nN8cF5nJTRg)
+:::
