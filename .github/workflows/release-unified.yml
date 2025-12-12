@@ -2,7 +2,7 @@
 # File Name: release-unified.yml
 # Author: Alexandre Kévin DE FREITAS MARTINS
 # Creation Date: 12/12/2025
-# Description: Unified release workflow for Unity project and documentation
+# Description: Unified release workflow - creates one release with PDFs and project
 # Copyright (c) 2025 Epitech
 # Version: 1.0.0
 #
@@ -25,7 +25,7 @@
 # THE SOFTWARE.
 #
 
-name: Unified Release Pipeline
+name: Release VRWorkshop
 
 on:
   workflow_dispatch:
@@ -34,43 +34,8 @@ on:
       - main
 
 jobs:
-  detect-changes:
-    name: Detect Changes
-    runs-on: ubuntu-latest
-    outputs:
-      has_unity_changes: ${{ steps.check.outputs.has_unity_changes }}
-      has_pdf_changes: ${{ steps.check.outputs.has_pdf_changes }}
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 2
-
-      - name: Check what changed
-        id: check
-        run: |
-          # Check for Unity project changes (excluding Documentation and README)
-          if git diff --name-only HEAD~1 HEAD | grep -v '^Documentation/' | grep -v '^README.md' > unity_changes.txt && [ -s unity_changes.txt ]; then
-            echo "has_unity_changes=true" >> $GITHUB_OUTPUT
-            echo "Unity project changes detected"
-          else
-            echo "has_unity_changes=false" >> $GITHUB_OUTPUT
-            echo "No Unity project changes"
-          fi
-
-          # Check for PDF changes in Documentation
-          if git diff --name-only HEAD~1 HEAD | grep '^Documentation/.*\.pdf$' > pdf_changes.txt && [ -s pdf_changes.txt ]; then
-            echo "has_pdf_changes=true" >> $GITHUB_OUTPUT
-            echo "PDF changes detected"
-          else
-            echo "has_pdf_changes=false" >> $GITHUB_OUTPUT
-            echo "No PDF changes"
-          fi
-
-  release-unity:
-    name: Release Unity Project Package
-    needs: detect-changes
-    if: needs.detect-changes.outputs.has_unity_changes == 'true'
+  release:
+    name: Create Release with PDFs and Project
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository (with LFS)
@@ -82,58 +47,19 @@ jobs:
       - name: Pull LFS files
         run: git lfs pull
 
+      - name: Create PDFs archive
+        run: |
+          cd Documentation
+          zip -r ../VRWorkshop-PDFs.zip . -i "*.pdf"
+          cd ..
+          echo "PDFs archive size:"
+          du -h VRWorkshop-PDFs.zip
+
       - name: Create Unity project archive
         run: |
-          tar --exclude-vcs --exclude='.DS_Store' --exclude='VRWorkshop-full.tar.gz' -czf VRWorkshop-full.tar.gz . 2> tar-warnings.log || (grep -q 'file changed as we read it' tar-warnings.log && exit 0 || exit 1)
-          rm -f tar-warnings.log
-
-      - name: Upload Unity project package as artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: VRWorkshop-full
-          path: VRWorkshop-full.tar.gz
-          retention-days: 14
-
-      - name: Show archive size
-        run: du -h VRWorkshop-full.tar.gz
-
-      - name: Get release info
-        id: release_info
-        run: |
-          echo "sha_short=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
-          echo "date=$(date +'%Y-%m-%d-%H%M')" >> $GITHUB_OUTPUT
-
-      - name: Create GitHub Release for Unity package
-        uses: softprops/action-gh-release@v1
-        with:
-          tag_name: unity-${{ steps.release_info.outputs.date }}-${{ steps.release_info.outputs.sha_short }}
-          name: Unity Project Package - ${{ steps.release_info.outputs.date }}
-          body: |
-            Automated release of the full Unity project package (including LFS artifacts).
-            Download and extract to get a ready-to-use Unity project.
-
-            Commit: ${{ github.sha }}
-          files: VRWorkshop-full.tar.gz
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-  release-docs:
-    name: Release Documentation PDFs
-    needs: detect-changes
-    if: needs.detect-changes.outputs.has_pdf_changes == 'true'
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 2
-
-      - name: Get changed PDF list
-        id: pdf_list
-        run: |
-          git diff --name-only HEAD~1 HEAD | grep '^Documentation/.*\.pdf$' > changed_pdfs.txt || true
-          echo "Changed PDFs:"
-          cat changed_pdfs.txt
+          zip -r VRWorkshop-Project.zip . -x "*.git*" -x "*.DS_Store" -x "VRWorkshop-PDFs.zip" -x "VRWorkshop-Project.zip"
+          echo "Project archive size:"
+          du -h VRWorkshop-Project.zip
 
       - name: Get release info
         id: release_info
@@ -141,20 +67,20 @@ jobs:
           echo "date=$(date +'%Y-%m-%d-%H%M')" >> $GITHUB_OUTPUT
           echo "sha_short=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
 
-      - name: Create GitHub Release for PDFs
+      - name: Create GitHub Release
         uses: softprops/action-gh-release@v1
         with:
-          files: Documentation/**/*.pdf
-          tag_name: docs-${{ steps.release_info.outputs.date }}-${{ steps.release_info.outputs.sha_short }}
-          name: Documentation PDFs - ${{ steps.release_info.outputs.date }}
+          tag_name: release-${{ steps.release_info.outputs.date }}-${{ steps.release_info.outputs.sha_short }}
+          name: VRWorkshop Release - ${{ steps.release_info.outputs.date }}
           body: |
-            Documentation PDFs updated on ${{ steps.release_info.outputs.date }}
+            Complete VRWorkshop release including:
+            - **VRWorkshop-PDFs.zip**: All documentation PDFs
+            - **VRWorkshop-Project.zip**: Full Unity project with LFS content
 
-            Changed files:
-            ```
-            $(cat changed_pdfs.txt)
-            ```
+            Download both files to get the complete workshop materials.
 
             Commit: ${{ github.sha }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            Date: ${{ steps.release_info.outputs.date }}
+          files: |
+            VRWorkshop-PDFs.zip
+            VRWorkshop-Project.zip
