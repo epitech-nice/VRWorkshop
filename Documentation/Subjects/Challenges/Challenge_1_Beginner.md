@@ -10,6 +10,8 @@ Bienvenue dans ce défi ! Vous allez corriger et améliorer une scène de réali
 Pour chaque étape, suivez le guide ci-dessous. Pour savoir où regarder sur votre écran, selon le document "L'interface de Unity" (**Unity_Manual_Unity's_interface_FR.pdf**), cherchez les lettres (A à H).
 Utilisez le document "Rig Simulator" (**Rig_Simulator_Keyboard_Shortcuts.pdf** & **Setup.pdf**) pour tester sans casque VR ou avec.
 
+\newpage
+
 ## Partie 1 : Corriger les accessoires du poignet (Main Gauche)
 
 **Le problème :** Sur votre poignet gauche virtuel, il y a un presse-papier (clipboard) et un mètre (measuring stick). Ils sont mal attachés : le presse-papier est à l'envers et le mètre ne se "colle" pas au bon endroit.
@@ -21,6 +23,8 @@ Utilisez le document "Rig Simulator" (**Rig_Simulator_Keyboard_Shortcuts.pdf** &
 - Regardez la Vue Scène (D). Utilisez les outils de rotation (en haut à gauche de la fenêtre) pour tourner le point d'attache jusqu'à ce qu'il soit dans le bon sens.
 - Répétez l'opération pour le point d'attache du mètre (measuring stick) pour le déplacer légèrement à gauche du presse-papier.
 
+![Screenshot montrant la hiérarchie développée du "Left Hand Controller" pour identifier les Sockets](./img/left_hand_controller_hierarchy_challenge1.png){width="35%"}
+
 ::: tip
 **Comment tester sans casque ?**
 
@@ -30,7 +34,7 @@ Utilisez le document "Rig Simulator" (**Rig_Simulator_Keyboard_Shortcuts.pdf** &
 
 :::
 
-![Screenshot montrant la hiérarchie développée du "Left Hand Controller" pour identifier les Sockets](./img/left_hand_controller_hierarchy_challenge1.png)
+\newpage
 
 ## Partie 2 : Le socle magnétique (Le "Pedestal")
 
@@ -43,6 +47,10 @@ Utilisez le document "Rig Simulator" (**Rig_Simulator_Keyboard_Shortcuts.pdf** &
 - Cherchez le composant Sphere Collider. Vous verrez une propriété appelée Radius (Rayon).
 - Réduisez considérablement ce chiffre. Cela réduira la zone verte visible dans la Vue Scène (D), qui représente la zone de détection.
 
+<br />
+
+\newpage
+
 ## Partie 3 : Trier les objets (Layers)
 
 **Le problème :** C'est le chaos ! Vous pouvez ranger le mètre sur le socle de la maison, et mettre la maison sur votre poignet. Chaque objet doit aller à sa place unique.
@@ -54,7 +62,11 @@ Utilisez le document "Rig Simulator" (**Rig_Simulator_Keyboard_Shortcuts.pdf** &
 - Cliquez sur le menu déroulant et décochez tout sauf la couche (Layer) qui correspond à son emplacement (ex: "Wrist Socket" ou similaire).
 - Faites l'inverse pour les Sockets (les points d'attache sur le poignet et le socle) : assurez-vous que le Socket du poignet n'accepte que les outils, et que le Socket du socle n'accepte que la maison.
 
-![Screenshot montrant le menu déroulant "Interaction Layer Mask"](./img/interaction_layer_mask_challenge1.png)
+
+![Screenshot montrant le menu déroulant "Interaction Layer Mask"](./img/interaction_layer_mask_challenge1.png){width="75%"}
+
+
+\newpage
 
 ## Partie 4 : La hauteur de la table
 
@@ -67,6 +79,8 @@ Utilisez le document "Rig Simulator" (**Rig_Simulator_Keyboard_Shortcuts.pdf** &
 - Posez ce cube au sol à côté de la table dans la Vue Scène (D).
 - Sélectionnez la table (l'objet parent) et baissez-la jusqu'à ce que son plateau soit au niveau du haut de votre cube.
 - Supprimez le cube une fois terminé.
+
+\newpage
 
 ## Partie 5 : L'arrivée de la téléportation
 
@@ -85,6 +99,8 @@ Utilisez le document "Rig Simulator" (**Rig_Simulator_Keyboard_Shortcuts.pdf** &
 - Visez l'ancre et appuyez sur le Trigger (Clic-gauche) pour vous téléporter.
 :::
 
+\newpage
+
 ## Partie 6 : Améliorer le rayon laser (Bonus)
 
 **Le problème :** Le rayon qui sort de votre main est une ligne droite basique et blanche. On veut une courbe élégante qui change de couleur.
@@ -96,6 +112,8 @@ Utilisez le document "Rig Simulator" (**Rig_Simulator_Keyboard_Shortcuts.pdf** &
 - Changez le Line Type de "Straight Line" à Projectile Curve ou Bezier Curve.
 - Cherchez ensuite le composant XR Interactor Line Visual.
 - Ouvrez le dégradé de couleur (Valid Color Gradient). Changez les couleurs pour qu'elles aillent de "Transparent" (Alpha à 0) à "Opaque" (Alpha à 255).
+
+\newpage
 
 ## Partie 7 : Ambiance sonore (Bonus)
 
@@ -112,4 +130,6 @@ C'est terminé ! N'oubliez pas de sauvegarder votre scène (File > Save ou Ctrl 
 
 Si jamais vous vouliez voir la solution en vidéo, elle est disponible ici :
 
-[Challenge 1](https://www.youtube.com/watch?v=5Q3zmaKSORw)
+::: center
+[Video Challenge 1](https://www.youtube.com/watch?v=5Q3zmaKSORw)
+:::
