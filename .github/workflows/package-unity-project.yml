@@ -61,3 +61,19 @@ jobs:
 
       - name: Show archive size
         run: du -h VRWorkshop-full.tar.gz
+
+      - name: Get short SHA
+        id: vars
+        run: echo "sha_short=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
+
+      - name: Create GitHub Release and upload package
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: unity-package-${{ steps.vars.outputs.sha_short }}
+          name: Unity Project Package ${{ steps.vars.outputs.sha_short }}
+          body: |
+            Automated release of the full Unity project package (including LFS artifacts).
+            Download and extract to get a ready-to-use Unity project.
+          files: VRWorkshop-full.tar.gz
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
