@@ -49,15 +49,14 @@ jobs:
 
       - name: Create Unity project archive
         run: |
-          cd ..
-          tar --exclude-vcs --exclude='.DS_Store' -czf VRWorkshop-full.tar.gz VRWorkshop
+          tar --exclude-vcs --exclude='.DS_Store' -czf VRWorkshop-full.tar.gz .
 
       - name: Upload Unity project package
         uses: actions/upload-artifact@v4
         with:
           name: VRWorkshop-full
-          path: ../VRWorkshop-full.tar.gz
+          path: VRWorkshop-full.tar.gz
           retention-days: 14
 
       - name: Show archive size
-        run: du -h ../VRWorkshop-full.tar.gz
+        run: du -h VRWorkshop-full.tar.gz
