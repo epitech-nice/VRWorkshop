@@ -49,7 +49,8 @@ jobs:
 
       - name: Create Unity project archive
         run: |
-          tar --exclude-vcs --exclude='.DS_Store' -czf VRWorkshop-full.tar.gz .
+          tar --exclude-vcs --exclude='.DS_Store' --exclude='VRWorkshop-full.tar.gz' -czf VRWorkshop-full.tar.gz . 2> tar-warnings.log || (grep -q 'file changed as we read it' tar-warnings.log && exit 0 || exit 1)
+          rm -f tar-warnings.log
 
       - name: Upload Unity project package
         uses: actions/upload-artifact@v4
