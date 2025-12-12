@@ -34,6 +34,7 @@ on:
       - main
     paths-ignore:
       - 'Documentation/**'
+      - 'README.md'
 
 jobs:
   package-project:
