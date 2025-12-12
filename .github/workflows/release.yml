@@ -32,13 +32,12 @@ on:
     branches:
       - main
     paths:
-      - 'Documentation/**/*.pdf'
+      - 'Documentation/**'
 
 jobs:
   release-docs:
     name: Release Documentation PDFs
     runs-on: ubuntu-latest
-    if: github.event.head_commit.added || github.event.head_commit.modified
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -54,10 +53,12 @@ jobs:
         id: find_pdfs
         run: |
           git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep '\.pdf$' > changed_pdfs.txt || true
-          echo "CHANGED_PDFS=$(cat changed_pdfs.txt | xargs)" >> $GITHUB_ENV
+          CHANGED=$(cat changed_pdfs.txt | xargs)
+          echo "CHANGED_PDFS=$CHANGED" >> $GITHUB_ENV
+          echo "Found PDFs: $CHANGED"
 
       - name: Upload changed PDFs as release assets
-        if: env.CHANGED_PDFS != ''
+        if: env.CHANGED_PDFS != '' && env.CHANGED_PDFS != null
         uses: softprops/action-gh-release@v1
         with:
           files: ${{ env.CHANGED_PDFS }}
