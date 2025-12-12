@@ -32,6 +32,8 @@ on:
   push:
     branches:
       - main
+    paths-ignore:
+      - 'Documentation/**'
 
 jobs:
   package-project:
