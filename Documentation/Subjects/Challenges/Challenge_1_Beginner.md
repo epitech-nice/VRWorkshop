@@ -30,7 +30,7 @@ Utilisez le document "Rig Simulator" (**Rig_Simulator_Keyboard_Shortcuts.pdf** &
 
 :::
 
-[Insérer ici un screenshot montrant la hiérarchie développée du "Left Hand Controller" pour identifier les Sockets]
+![Screenshot montrant la hiérarchie développée du "Left Hand Controller" pour identifier les Sockets](./img/left_hand_controller_hierarchy_challenge1.png)
 
 ## Partie 2 : Le socle magnétique (Le "Pedestal")
 
@@ -54,7 +54,7 @@ Utilisez le document "Rig Simulator" (**Rig_Simulator_Keyboard_Shortcuts.pdf** &
 - Cliquez sur le menu déroulant et décochez tout sauf la couche (Layer) qui correspond à son emplacement (ex: "Wrist Socket" ou similaire).
 - Faites l'inverse pour les Sockets (les points d'attache sur le poignet et le socle) : assurez-vous que le Socket du poignet n'accepte que les outils, et que le Socket du socle n'accepte que la maison.
 
-[Insérer ici un screenshot de l'Inspecteur montrant le menu déroulant "Interaction Layer Mask"]
+![Screenshot montrant le menu déroulant "Interaction Layer Mask"](./img/interaction_layer_mask_challenge1.png)
 
 ## Partie 4 : La hauteur de la table
 

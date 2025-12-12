@@ -62,6 +62,7 @@ Tips : Utilisez la barre de recherche en haut de la Hiérarchie (B) et tapez "To
 (Potentiellement, vous pourriez avoir une fenêtre pop-up vous demandant de confirmer que vous voulez rendre l'objet statique. Acceptez.)
 
 [Insérer ici un screenshot du coin supérieur droit de l'Inspecteur montrant la case "Static"]
+![Screenshot montrant la case "Static" dans l'Inspecteur](./img/static_checkbox_challenge3.png)
 
 ## Partie 5 : La Console Sombre (Light Probes)
 
