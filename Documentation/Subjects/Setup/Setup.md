@@ -14,6 +14,8 @@ version:    1.0
 
 ***
 
+\newpage
+
 ## Étape 1 – Créer le projet VR à partir du starter
 
 ### 1. Télécharger le projet “Create with VR starter project”
@@ -21,6 +23,8 @@ version:    1.0
 1. Ouvre ton navigateur et va sur la page du tutoriel “1.1 – VR Project Setup”. [1]
 2. Clique sur le lien “Create with VR starter project” pour télécharger l’archive. [1]
 3. Attends la fin du téléchargement (fichier .zip ou .unitypackage selon la version). [1]
+
+\newpage
 
 ### 2. Extraire le projet sur ton ordinateur
 
@@ -33,12 +37,16 @@ version:    1.0
 
 À l’intérieur du dossier extrait, cherche un dossier nommé **“VR Room Project”**. [1]
 
+\newpage
+
 ### 3. Renommer et déplacer le dossier du projet
 
 1. Renomme le dossier `VR Room Project` en par exemple :
    - `VR Room - [Ton Prénom]` (exemple : `VR Room - Alex`). [1]
 2. Déplace ce dossier à un endroit simple à retrouver, par exemple :
    - Bureau → nouveau dossier `Create with VR` → y glisser `VR Room - [Ton Prénom]`. [1]
+
+\newpage
 
 ### 4. Ajouter le projet dans Unity Hub
 
@@ -48,6 +56,8 @@ version:    1.0
 4. Navigue jusqu’au dossier `VR Room - [Ton Prénom]`, sélectionne-le, puis valide. [1]
 5. Le projet apparaît maintenant dans la liste des projets Unity Hub.
 
+\newpage
+
 ### 5. Ouvrir le projet avec Unity 6.x
 
 1. Dans Unity Hub, clique sur ton projet `VR Room - [Ton Prénom]`.
@@ -56,6 +66,8 @@ version:    1.0
 4. Attends l’ouverture du projet : la première fois, cela peut prendre plusieurs minutes. [1]
 
 ***
+
+\newpage
 
 ## Étape 2 – Explorer la scène de départ
 
@@ -70,12 +82,16 @@ version:    1.0
 
 Tu viens d’ouvrir la scène sur laquelle tu vas travailler.
 
+\newpage
+
 ### 2. Comprendre les fenêtres principales
 
 - **Hierarchy** (gauche) : liste tous les objets de la scène (caméra, lumière, objets 3D…). [2]
 - **Scene** (centre) : vue 3D où tu vois ta scène.
 - **Game** (onglet à côté de Scene) : ce que le joueur voit quand le jeu tourne. [2]
 - **Inspector** (droite) : montre les propriétés de l’objet sélectionné (position, composants…). [2]
+
+\newpage
 
 ### 3. Inspecter le rig VR (XR Origin)
 
@@ -88,6 +104,8 @@ Tu viens d’ouvrir la scène sur laquelle tu vas travailler.
    - **LeftHand Controller**
    - **RightHand Controller** [1]
 
+\newpage
+
 ### 4. Comprendre le composant “Tracked Pose Driver”
 
 1. Dans la **Hierarchy**, sélectionne **Camera Offset** → puis **Main Camera**. [1]
@@ -95,6 +113,8 @@ Tu viens d’ouvrir la scène sur laquelle tu vas travailler.
 3. Ce composant permet de faire suivre la position et rotation réelles de ton casque VR à la caméra dans Unity. [1]
 
 ***
+
+\newpage
 
 ## Étape 3 – Configurer le suivi des mains (Tracked Pose Driver sur les contrôleurs)
 
@@ -109,6 +129,8 @@ Tu viens d’ouvrir la scène sur laquelle tu vas travailler.
 
 Cela remplit automatiquement les références d’Input Action nécessaires au suivi de la main gauche.
 
+\newpage
+
 ### 2. Répéter pour le contrôleur droit
 
 1. Sélectionne **RightHand Controller** dans la **Hierarchy**. [1]
@@ -119,6 +141,8 @@ Tes deux mains VR sont maintenant configurées pour suivre les contrôleurs du c
 
 ***
 
+\newpage
+
 ## Étape 4 – Comprendre les Input Actions (système d’entrées)
 
 ### 1. Trouver l’Input Action Manager
@@ -127,6 +151,8 @@ Tes deux mains VR sont maintenant configurées pour suivre les contrôleurs du c
 2. Clique dessus. Dans l’**Inspector**, tu verras le composant **Input Action Manager**. [1]
 
 Ce composant charge un fichier d’actions qui décrit comment les mouvements/ boutons du casque sont traduits en actions dans Unity. [1][2]
+
+\newpage
 
 ### 2. Ouvrir l’asset “XRI Default Input Actions”
 
@@ -140,6 +166,8 @@ Dans cet éditeur :
 - À droite : les **Actions** individuelles (position, rotation, bouton de saisie…). [1]
 
 ***
+
+\newpage
 
 ## Étape 5 – Ajouter une pièce (room) à la scène
 
@@ -155,6 +183,8 @@ Dans cet éditeur :
 
 Un **prefab** est un modèle prêt à l’emploi d’un objet (ou ensemble d’objets) que tu peux glisser dans la scène. [2]
 
+\newpage
+
 ### 2. Ajouter une pièce dans la scène
 
 1. Choisis un prefab de room, par exemple **Room_Modern**. [1]
@@ -165,6 +195,8 @@ Un **prefab** est un modèle prêt à l’emploi d’un objet (ou ensemble d’o
 6. Mets les valeurs de position à :
    - **X = 0**, **Y = 0**, **Z = 0**. [1]
 
+\newpage
+
 ### 3. Supprimer le plan (Plane) de base
 
 1. Dans **Hierarchy**, cherche un objet nommé **Plane**. [1]
@@ -174,6 +206,8 @@ Il ne sert plus car la pièce que tu viens d’ajouter a déjà un sol.
 
 ***
 
+\newpage
+
 ## Étape 6 – Ajouter un environnement extérieur
 
 ### 1. Ajouter un premier plan (Foreground)
@@ -182,10 +216,14 @@ Il ne sert plus car la pièce que tu viens d’ajouter a déjà un sol.
 2. Cherche un prefab contenant “Foreground” dans son nom (par ex. **Foreground_XXXX**). [1]
 3. Glisse ce prefab dans la **Hierarchy**.
 
+\newpage
+
 ### 2. Ajouter un arrière-plan (Background)
 
 1. Dans le même dossier `Environments`, choisis un prefab “Background”. [1]
 2. Glisse ce prefab dans la **Hierarchy** également.
+
+\newpage
 
 ### 3. Positionner l’environnement derrière les fenêtres
 
@@ -194,6 +232,8 @@ Il ne sert plus car la pièce que tu viens d’ajouter a déjà un sol.
 3. Fais la même chose pour le **Background**, en le plaçant plus loin pour faire un paysage lointain. [1]
 
 ***
+
+\newpage
 
 ## Étape 7 – Ajuster la lumière du soleil
 
@@ -207,6 +247,8 @@ Tu peux aussi changer la **Color** dans le composant **Light** pour simuler une 
 
 ***
 
+\newpage
+
 ## Étape 8 – Utiliser le Device Simulator (tester sans casque)
 
 ### 1. Ajouter le prefab “XR Device Simulator”
@@ -215,10 +257,14 @@ Tu peux aussi changer la **Color** dans le composant **Light** pour simuler une 
    - `Samples` → `XR Interaction Toolkit` → `[version]` → `XR Device Simulator` → `XRDeviceSimulator`. [1]
 2. Glisse le prefab **XR Device Simulator** dans la **Hierarchy**. [1]
 
+\newpage
+
 ### 2. Lancer la simulation
 
 1. En haut de l’éditeur Unity, clique sur le bouton **Play** (triangle). [2]
 2. La vue **Game** s’active et le Device Simulator t’affiche une interface d’aide (selon la version). [1]
+
+\newpage
 
 ### 3. Contrôles clavier/souris principaux
 
@@ -228,6 +274,8 @@ Tu peux aussi changer la **Color** dans le composant **Light** pour simuler une 
 - Tourner un appareil (tête ou main) : maintenir le **clic molette** et bouger la souris. [1]
 - Réinitialiser positions/rotations : appuyer sur **V**. [1]
 
+\newpage
+
 ### 4. Désactiver le Device Simulator avant test sur casque
 
 1. Quand tu as fini de tester, sélectionne **XR Device Simulator** dans la **Hierarchy**. [1]
@@ -236,6 +284,8 @@ Tu peux aussi changer la **Color** dans le composant **Light** pour simuler une 
 Ne pas le désactiver peut casser le suivi de tête réel quand tu testes avec un casque. [1]
 
 ***
+
+\newpage
 
 ## Étape 9 – Tester en VR via Unity (Windows + casque type Quest en Link)
 
@@ -247,6 +297,8 @@ Ne pas le désactiver peut casser le suivi de tête réel quand tu testes avec u
 2. Dans le menu de gauche, clique sur **XR Plug-in Management**. [1]
 3. Dans l’onglet **Windows, Mac, Linux**, coche **OpenXR** dans la liste des Plug-in Providers. [1]
 
+\newpage
+
 ### 2. Corriger les avertissements OpenXR (interaction profile)
 
 1. Si tu vois un petit icône de warning à côté de OpenXR, clique dessus pour ouvrir la fenêtre **Project Validation**. [1]
@@ -255,11 +307,15 @@ Ne pas le désactiver peut casser le suivi de tête réel quand tu testes avec u
    - Ajouter un profil d’interaction adapté à ton casque, par exemple **Oculus Touch Controller Profile** pour un Quest. [1][3]
    - Activer les Feature Groups recommandés (OpenXR Feature Groups). [1]
 
+\newpage
+
 ### 3. Connecter ton casque
 
 1. Branche ton casque VR à ton PC avec un câble compatible. [3]
 2. Lance l’application prévue (par exemple **Quest Link / Meta Quest App** pour le Quest). [3]
 3. Vérifie que l’appli détecte correctement ton casque.
+
+\newpage
 
 ### 4. Tester dans l’éditeur
 
@@ -268,6 +324,8 @@ Ne pas le désactiver peut casser le suivi de tête réel quand tu testes avec u
 3. Mets ton casque : tu devrais voir ta pièce VR et pouvoir bouger la tête pour regarder autour. [1]
 
 ***
+
+\newpage
 
 ## Étape 10 – Build & Run sur Meta Quest (Android)
 
@@ -280,6 +338,8 @@ Ne pas le désactiver peut casser le suivi de tête réel quand tu testes avec u
 3. Coche **OpenXR**. [1]
 4. Si tu ne vois pas Android, c’est que le module Android n’est pas installé dans Unity. [1]
 
+\newpage
+
 ### 2. Corriger les warnings OpenXR Android
 
 1. Clique sur l’icône de warning pour ouvrir **OpenXR Project Validation**. [1]
@@ -289,16 +349,22 @@ Ne pas le désactiver peut casser le suivi de tête réel quand tu testes avec u
    - Dans l’onglet **Android**, clique sur le bouton **+** pour ajouter un profil. [1]
    - Pour Quest, choisis **Oculus Touch Controller Profile** et active **Meta Quest Support**. [1][3]
 
+\newpage
+
 ### 3. Préparer la scène pour le build
 
 1. Vérifie que **XR Device Simulator** est **désactivé** dans la **Hierarchy**. [1]
 2. Va dans **File** → **Build Profiles** ou **Build Settings** (selon version). [1][2]
 3. Clique sur **Open Scene List** si nécessaire, puis sur **Add Open Scenes** pour ajouter ta scène actuelle à la liste de build. [1]
 
+\newpage
+
 ### 4. Passer la plateforme de build en Android
 
 1. Dans la fenêtre de build, dans la liste **Platforms**, clique sur **Android**. [1]
 2. Clique sur **Switch Platform** et attends la fin de la conversion. [1]
+
+\newpage
 
 ### 5. Sélectionner ton Quest comme appareil de destination
 
@@ -309,6 +375,8 @@ Ne pas le désactiver peut casser le suivi de tête réel quand tu testes avec u
    - Mets le casque et accepte la demande “Allow USB debugging”. [3]
    - Vérifie que le mode développeur est activé.
    - Redémarre éventuellement le casque ou Unity. [3]
+
+\newpage
 
 ### 6. Build & Run sur le casque
 
@@ -321,6 +389,8 @@ Une fois terminé, l’application est installée sur ton Quest dans la section 
 
 ***
 
+\newpage
+
 ## Étape 11 – Problèmes fréquents
 
 - L’image ne prend pas tout le champ de vision :
@@ -330,6 +400,8 @@ Une fois terminé, l’application est installée sur ton Quest dans la section 
   - Ou l’**Input Action Manager** n’est pas correctement configuré. [1]
 
 ***
+
+\newpage
 
 ## Étape 12 – Idées d’extensions (optionnel)
 
