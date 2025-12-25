@@ -9,6 +9,8 @@ Bienvenue dans votre premier atelier créatif ! Aujourd'hui, nous n'allons pas r
 
 Utilisez L'interface de Unity (**Unity_Manual_Unity's_interface_FR.pdf**) pour vous repérer et Rig Simulator (**Rig_Simulator_Keyboard_Shortcuts.pdf** & **Setup.pdf**) pour tester.
 
+\newpage
+
 ## Étape 1 : Préparer le Joueur (Setup & Locomotion)
 
 Pour commencer, il nous faut un sol et un joueur capable de se téléporter.
@@ -37,6 +39,8 @@ Pour commencer, il nous faut un sol et un joueur capable de se téléporter.
 - Appuyez sur G (ou clic-gauche selon votre configuration) pour valider la téléportation. Si vous changez de place, c'est gagné !
 :::
 
+\newpage
+
 ## Étape 2 : Créer la "Balle" (Grabbable)
 
 **Basé sur le tutoriel 1.3**
@@ -61,6 +65,8 @@ Maintenant, créons un objet que l'on peut ramasser et jeter.
 - Pointez le cube. Quand le rayon devient blanc, appuyez sur G (Grip) pour l'attraper.
 - Bougez la souris pour lever le cube, et relâchez G en bougeant brusquement la souris pour le lancer !
 :::
+
+\newpage
 
 ## Étape 3 : Le Socle de Rangement (Sockets)
 
@@ -87,6 +93,8 @@ Créons un endroit spécifique où le cube doit être rangé. S'il est proche, i
 - Approchez-le de votre "Socket". Vous devriez voir un fantôme du cube apparaître à l'emplacement.
 - Lâchez le cube (Relâchez G) : il doit se fixer parfaitement au centre du socle.
 :::
+
+\newpage
 
 ## Étape 4 : Le Défi (Pour s'amuser)
 
